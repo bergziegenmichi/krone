@@ -12,7 +12,7 @@ GECKODRIVER = "/home/michael/geckodriver"
 DURCHLAEUFE = 10000
 
 
-def wait_for_element(webdriver, by: By, query: str, timeout: int = 10) -> WebElement:
+def wait_for_element(webdriver, by: By, query: str, timeout: int = 1000) -> WebElement:
     try:
         return WebDriverWait(webdriver, timeout).until(
             expected_conditions.element_to_be_clickable((by, query)))
